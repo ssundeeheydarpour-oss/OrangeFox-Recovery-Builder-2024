@@ -104,6 +104,8 @@ jobs:
       run: |
         cd ${GITHUB_WORKSPACE}/OrangeFox/fox_${{ github.event.inputs.MANIFEST_BRANCH }}
         git clone ${{ github.event.inputs.DEVICE_TREE }} -b ${{ github.event.inputs.DEVICE_TREE_BRANCH }} ./${{ github.event.inputs.DEVICE_PATH }}
+        git clone https://github.com/LineageOS/android_kernel_samsung_universal7580.git -b lineage-18.1 kernel/samsung/universal7580
+        git clone https://github.com/LineageOS/android_device_samsung_universal7580-common.git -b lineage-18.1 device/samsung/universal7580-common
         cd ${{ github.event.inputs.DEVICE_PATH }}
         echo "COMMIT_ID=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
