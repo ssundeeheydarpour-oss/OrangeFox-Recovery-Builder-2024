@@ -109,6 +109,7 @@ jobs:
         git clone https://github.com/LineageOS/android_hardware_samsung_slsi_exynos5.git hardware/samsung_slsi/exynos5
         git clone https://github.com/LineageOS/android_hardware_samsung_slsi_exynos7580.git hardware/samsung_slsi/exynos7580
         git clone https://github.com/omnirom/android_vendor_omni.git vendor/omni
+        git clone https://github.com/TeamWin/android_device_samsung_exynos7580-common.git device/samsung/exynos7580-common
         cd ${{ github.event.inputs.DEVICE_PATH }}
         echo "COMMIT_ID=$(git rev-parse HEAD)" >> $GITHUB_ENV
 
